@@ -4,7 +4,7 @@ A Vite-based BCGov Block Theme augmentation framework for adding additional buil
 
 This allows for SCSS and vanilla Javascript module-based development by providing assets that can be uploaded as Asset Loader additions to the Media Library and enqueued to either the public facing or admin environment. 
 
-The intent of this environment is to be used for lightweight additions to styles or DOM manipulation that is beyong the scope of what WordPress itself can manage inside the core block theme environment.
+The intent of this environment is to be used for lightweight additions to styles or DOM manipulation that is beyond the scope of what WordPress itself can manage inside the core block theme environment.
 
 ## Entry points
 
