@@ -17,10 +17,17 @@ There are occasions when the changes made to public facing styles should also be
 
 ## Build files
 
+For watching changes and generating new builds on save:
+```
+npm run build:watch
+```
+
+For one off builds:
 ```
 npm run build
 ```
-Files from this command will be found in `/dist/assets/` – as noted above these files can then be uploaded to the Media Library and enqueued for Public or Admin use (or both) respectively. By default only styles are provided for enqueing on the admin side.
+
+Files from either of these commands will be found in `/dist/assets/` – as noted above these files can then be uploaded to the Media Library and enqueued for Public or Admin use (or both) respectively. By default only styles are provided for enqueing on the admin side.
 
 ## Helper functions
 
