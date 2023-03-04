@@ -1,8 +1,10 @@
 # Block-Theme-Supplemental
 
-A base Vite build framework for adding additional scripts and styles to BCGov Block based themes.
+A Vite-based BCGov Block Theme augmentation framework for adding additional built scripts and styles to a specific installation.
 
-Allows for SCSS and Javascript module development augmentation through Asset Loader additions to the Media Library.
+This allows for SCSS and vanilla Javascript module-based development by providing assets that can be uploaded as Asset Loader additions to the Media Library and enqueued to either the public facing or admin environment. 
+
+The intent of this environment is to be used for lightweight additions to styles or DOM manipulation that is beyong the scope of what WordPress itself can manage inside the core block theme environment.
 
 ## Entry points
 
@@ -10,7 +12,7 @@ For public facing style updates use:
 - `/styles/public-additional-styles.scss` for SCSS efforts
 - `/scripts/public-additional-scripts.js` for Javascript efforts
 
-There are occasions when the changes made to public facing styles should also be replicated in the blok editing environment. So for any admin side specific style updates use:
+There are occasions when the changes made to public facing styles should also be replicated in the block editing environment. So for any admin side specific style updates use:
 - `/styles/admin-additional-styles.scss`
 
 ## Build files
@@ -18,11 +20,11 @@ There are occasions when the changes made to public facing styles should also be
 ```
 npm run build
 ```
-Files from this command will be found in `/dist/assets/` – these files can then be uploaded to the Media Library and enqueued for Public or Admin use (or both) respectively.
+Files from this command will be found in `/dist/assets/` – as noted above these files can then be uploaded to the Media Library and enqueued for Public or Admin use (or both) respectively. By default only styles are provided for enqueing on the admin side.
 
 ## Helper functions
 
-Additional helpers Javascript functions are in `/scripts/utils.js`:
+Additional helpers Javascript functions are in `/scripts/utils.js`. Should you need to add your own helper functions, this file has been provided and is chumked into its own build file:
 - qs: a shorthand querySelect which returns the first element matching the given CSS selector within the given parent element
 - qsa: a shorthand querySelectAll that returns an actual array of all elements matching the given CSS selector within the given parent element
 - createElement: a better version of document.createElement that allows for creating an HTML element and passing in an object of attributes
