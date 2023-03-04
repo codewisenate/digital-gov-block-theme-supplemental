@@ -12,7 +12,7 @@ Use `/scripts/additional-scripts.js` for Javascript efforts.
 ```
 npm run build
 ```
-Files from this command will be found in `/dist/assets/` – these files can then be uploaded to the Media Library and enqueued for Public use.
+Files from this command will be found in `/dist/assets/` – these files can then be uploaded to the Media Library and enqueued for Public or Admin use (or both) respectively.
 
 ## Helper functions
 Additional helpers Javascript functions are in `/scripts/utils.js`:
