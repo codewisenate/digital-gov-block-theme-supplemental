@@ -1,4 +1,4 @@
-# Block-Theme-Supplemental
+# BCGov Block Theme supplemental scripts and styles framework
 
 A Vite-based BCGov Block Theme augmentation framework for adding additional built scripts and styles to a specific installation.
 
