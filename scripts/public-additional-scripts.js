@@ -8,7 +8,11 @@ const domReady = () => {
 	 * SafarIE bug requires 0ms timeout.
 	 */
 	setTimeout(function() {
+		/**
+		 * Test import of util – remove when ready to use.
+		 */
 		const body = qs('body');
+		console.log('body loaded', body);
 	}, 0);
 };
 
