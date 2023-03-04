@@ -32,7 +32,7 @@ Files from either of these commands will be found in **`/dist/assets/`** – as 
 
 ## Helper functions
 
-Additional helpers Javascript functions are in `/scripts/utils.js`. Should you need to add your own helper functions, this file has been provided and is chumked into its own build file:
+Additional helpers Javascript functions are in `/scripts/utils.js`. Should you need to add your own helper functions, this file has been provided and is chunked into its own build file:
 - `qs`: a shorthand querySelect which returns the first element matching the given CSS selector within the given parent element
 - `qsa`: a shorthand querySelectAll that returns an actual array of all elements matching the given CSS selector within the given parent element
 - `createElement`: a better version of document.createElement that allows for creating an HTML element and passing in an object of attributes
