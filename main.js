@@ -1,4 +1,2 @@
-import './style.scss'
-
-
-
+import './style.scss';
+import './scripts/additional-scripts';
