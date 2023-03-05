@@ -1,7 +1,7 @@
-:root {
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
-}
+/**
+* For general admin styles use: body.wp-admin { } 
+*/
+
+/**
+* For admin editor based styles use: html :where(.editor-styles-wrapper) { } 
+*/
