@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   build: {
+    polyfillModulePreload: false,
     rollupOptions: {
       input: {
         public: resolve(__dirname, 'public.html'),
