@@ -65,6 +65,10 @@ const domReady = () => {
 								behavior: 'smooth',
 								scrollMarginTop: 30
 							});
+							// set focus on first card of target section
+							target.setAttribute('tabindex', '0');
+							target.focus();
+							target.removeAttribute('tabindex');
 							// Resume observer after scrolling to target
 							setTimeout(() => {
 								clickedOnNav = false;
