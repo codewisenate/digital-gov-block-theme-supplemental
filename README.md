@@ -37,3 +37,4 @@ Additional helpers Javascript functions are in `/scripts/utils.js`. Should you n
 - `qsa`: a shorthand querySelectAll that returns an actual array of all elements matching the given CSS selector within the given parent element
 - `createElement`: a better version of document.createElement that allows for creating an HTML element and passing in an object of attributes
 - `addGlobalEventListener`: a utility function that attaches an event listener to the given parent element and triggers the callback function only if the event target matches the given selector 
+- `findParentElementByClass`: finds the closest ancestor element with the specified class name from the given element

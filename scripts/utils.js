@@ -132,3 +132,17 @@ export function unEscapeCSS(cssStr) {
 	return cssStr;
 }
 
+/**
+ * Finds the closest ancestor element with the specified class name from the given element.
+ * 
+ * @param {HTMLElement} element - The element to start searching from.
+ * @param {string} className - The class name to search for.
+ * @returns {HTMLElement|null} - The closest ancestor element with the specified class name, or null if not found.
+ */
+export function findParentElementByClass(element, className) {
+	let current = element.parentNode;
+	while (current !== null && current.nodeType === Node.ELEMENT_NODE && !current.classList.contains(className)) {
+		current = current.parentNode;
+	}
+	return current;
+}

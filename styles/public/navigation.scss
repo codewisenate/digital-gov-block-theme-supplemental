@@ -1,0 +1,33 @@
+
+body.has-ribbon-menu {
+	.has-modal-open {
+		width: calc(100vw - 4rem);
+		.wp-block-navigation__responsive-dialog {
+			margin: 3rem auto auto;
+		}
+		.wp-block-navigation__container {
+			gap: 0.5rem !important;
+
+			>.wp-block-navigation-item {
+				a {
+					padding: 1rem 0.5rem;
+
+					&:focus-visible,
+					&:focus,
+					&:hover {
+						background-color: $white;
+					}
+				}
+
+				@media (min-width: 599px) {
+
+					&:focus-visible,
+					&:focus,
+					&:hover {
+						background-color: hsla(0, 0%, 7%, .1);
+					}
+				}
+			}
+		}
+	}
+}

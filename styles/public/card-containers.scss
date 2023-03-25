@@ -1,0 +1,189 @@
+
+.card-container {
+	.wp-block-post-featured-image {
+		border-radius: 1rem 1rem 0 0;
+		overflow: hidden;
+		min-height: 200px;
+	}
+
+	.wp-block-post,
+	.wp-block-column {
+		display: flex;
+
+		.wp-block-group {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			>* {
+				margin-left: 0 !important;
+				margin-right: 0 !important;
+			}
+
+			.wp-block-post-featured-image {
+				margin-left: auto !important;
+				margin-right: auto !important;
+			}
+
+			.link-label,
+			.wp-block-buttons {
+				margin-top: auto;
+			}
+		}
+	}
+
+	.common-component {
+
+		a,
+		a>* {
+			color: unset;
+			text-decoration: unset;
+		}
+
+		a {
+
+			&:hover,
+			&:focus-visible {
+				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+				outline: 2px solid var(--wp--preset--color--primary-brand);
+				border-radius: 1rem;
+				cursor: pointer;
+
+				h2,
+				h3,
+				h4 {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		.taxonomy-common_component_category {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 0.25rem;
+			justify-content: flex-start;
+			align-items: flex-start;
+			span.tag {
+				background-color: var(--wp--preset--color--background);
+				border: 1px solid $dustygrey;
+				border-radius: 999px;
+				height: 25px;
+				padding: 3px 8px 0;
+				font-size: 12px;
+				white-space: nowrap;
+				text-align: center;
+			}
+		}
+	}
+}
+
+
+.case-study-card-container,
+.cop-card-container {
+	.wp-block-post {
+		display: flex;
+
+		.case-study-group,
+		.cop-group {
+			min-height: calc(100% - 120px);
+
+			.wp-block-group {
+				display: flex;
+				flex-direction: column;
+				height: auto;
+				min-height: 120px;
+
+				&:nth-child(2) {
+					height: calc(100% - 120px);
+				}
+
+				>* {
+					margin-left: 0 !important;
+					margin-right: 0 !important;
+				}
+
+				.wp-block-post-featured-image {
+					margin-left: auto !important;
+					margin-right: auto !important;
+				}
+			}
+		}
+	}
+
+	a .case-study-group,
+	a .cop-group,
+	a>* {
+		color: unset;
+		text-decoration: unset;
+		height: 100%;
+	}
+
+	a {
+		color: unset;
+		text-decoration: unset;
+
+		&:hover,
+		&:focus-visible {
+			box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+			outline: 2px solid var(--wp--preset--color--primary-brand);
+			border-radius: 1rem;
+			cursor: pointer;
+
+			h2,
+			h3,
+			h4 {
+				text-decoration: underline;
+			}
+		}
+
+		.case-study-group,
+		.cop-group {
+			height: 100%;
+		}
+	}
+}
+
+
+body.flex-cards {
+	.content-column {
+		.wp-block-columns {
+			gap: 2rem;
+		}
+
+		a,
+		a>* {
+			color: unset;
+			text-decoration: unset;
+			height: 100%;
+		}
+
+		a {
+			color: unset;
+			text-decoration: unset;
+
+			&:focus-visible {
+				box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+				outline: 2px solid var(--wp--preset--color--primary-brand);
+				border-radius: 1rem;
+			}
+
+			.guidance-card {
+				height: 100%;
+
+				&:hover,
+				&:focus-visible {
+					box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+					outline: 2px solid var(--wp--preset--color--primary-brand);
+					border-radius: 1rem;
+					cursor: pointer;
+
+					h2,
+					h3,
+					h4 {
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+	}
+}
