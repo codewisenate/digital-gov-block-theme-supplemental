@@ -101,12 +101,12 @@ footer {
 
 
 .mobile-only {
-	display: none;
+	display: inherit;
 }
 
 @media (min-width: 599px) {
 	.mobile-only {
-		display: inherit;
+		display: none;
 	}
 }
 

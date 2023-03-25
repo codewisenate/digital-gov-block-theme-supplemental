@@ -16,9 +16,11 @@ const domReady = () => {
 		const inPageNav = document.querySelector('.in-page-nav');
 
 		if (inPageNav) {
+			
 			const inPageNavLinks = Array.from(inPageNav.querySelectorAll('a'));
 			let clickedOnNav = false;
 			if (inPageNavLinks) {
+
 				const targets = inPageNavLinks.map(link => {
 					const target = document.querySelector(link.getAttribute('href'));
 					return target;
@@ -65,7 +67,7 @@ const domReady = () => {
 								behavior: 'smooth',
 								scrollMarginTop: 30
 							});
-							// set focus on first card of target section
+							// set focus on ID'd element of target section
 							setTimeout(() => {
 								target.setAttribute('tabindex', '0');
 								target.focus();
@@ -82,6 +84,16 @@ const domReady = () => {
 
 				inPageNavLinks.forEach(link => link.parentNode.classList.remove('active'));
 				inPageNavLinks[0].parentNode.classList.add('active');
+	
+			}
+
+			const inStickyNav = document.querySelector('.sticky');
+	
+			if (inStickyNav) {
+				const mobileNavTitle = document.createElement('h2');
+				mobileNavTitle.className = 'mobile-only';
+				mobileNavTitle.textContent = 'On this page';
+				inStickyNav.insertBefore(mobileNavTitle, inStickyNav.firstChild);
 			}
 		}
 	}, 0);
