@@ -63,16 +63,19 @@ const domReady = () => {
 							link.parentNode.classList.add('active');
 							clickedOnNav = true;
 							const target = document.querySelector(link.getAttribute('href'));
-							target.scrollIntoView({
-								behavior: 'smooth',
-								scrollMarginTop: 30
-							});
-							// set focus on ID'd element of target section
-							setTimeout(() => {
-								target.setAttribute('tabindex', '0');
-								target.focus();
-								target.removeAttribute('tabindex');
-							}, 500)
+							if (target) {
+								target.scrollIntoView({
+									behavior: 'smooth',
+									scrollMarginTop: 30
+								});
+								// set focus on ID'd element of target section
+								setTimeout(() => {
+									target.setAttribute('tabindex', '0');
+									target.focus();
+									target.removeAttribute('tabindex');
+									target.style.outline = 'none';
+								}, 500);
+							}
 							// Resume observer after scrolling to target
 							setTimeout(() => {
 								clickedOnNav = false;

@@ -1,0 +1,21 @@
+footer {
+	nav {
+		a {
+			color: currentColor !important;
+		}
+	}
+
+	a.back-to-top:focus {
+		border-radius: 3px;
+		outline: 2px solid $headeryellow;
+		outline-offset: 2px;
+	}
+}
+
+nav.footer-nav ul {
+	display: flex;
+	gap: 1rem;
+	list-style: none;
+	margin: 0px;
+	padding: 0;
+}
