@@ -1,3 +1,4 @@
+import { qsa } from '../utils';
 /**
  * Navigation DOM manipulation.
  * 

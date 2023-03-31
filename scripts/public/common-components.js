@@ -1,3 +1,5 @@
+import { createBreadcrumbs, qs } from '../utils';
+
 /**
  * Common Components DOM manipulation.
  * 
@@ -62,6 +64,7 @@ const domReady = () => {
 		/**
 		 * Common Components Template.
 		 * 
+		 * Generate the in-page breadcrumbs.
 		 * Set main navigation parent to highlight state.
 		 * Modify category tag output to remove links and 'active'.
 		 * Generate meta field button for getting started links.
@@ -129,6 +132,18 @@ const domReady = () => {
 				}
 			}
 
+			// Generate the in-page breadcrumbs.
+			const pageTitle = document.title;
+			const paths = [
+				{ name: "Common components", url: "/common-components/" },
+				{ name: pageTitle }
+			];
+		  
+			const breadcrumbs = createBreadcrumbs(paths);
+			const breadcrumbsContainer = qs('.breadcrumb-placeholder');
+			if(breadcrumbsContainer) {
+				breadcrumbsContainer.appendChild(breadcrumbs);
+			}
 		}
 
 	}, 0);

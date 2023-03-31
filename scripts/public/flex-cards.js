@@ -14,11 +14,32 @@ const domReady = () => {
 		/**
 		 * Aggregation: Card setup. Used on Guidance, Policies and standards and other pages.
 		 */
-		const isFlexCards = document.querySelector('body.flex-cards');
+		const isFlexCards = document.querySelector('.flex-cards');
 
 		if (isFlexCards) {
 
-			const flexCardGroup = document.querySelectorAll('.guidance-card');
+			const guidanceCardGroup = document.querySelectorAll('.guidance-card');
+			const flexCardGroup = document.querySelectorAll('.flex-card');
+
+			if (guidanceCardGroup) {
+				guidanceCardGroup.forEach((group) => {
+
+					const headline = group.querySelector('.card-title');
+					if (headline) {
+						const headlineLink = headline.querySelector('a');
+						if (headlineLink) {
+							const link = headlineLink.getAttribute('href');
+							const linkWrapper = document.createElement('a');
+							linkWrapper.href = link;
+							group.parentNode.insertBefore(linkWrapper, group);
+							linkWrapper.appendChild(group);
+							headline.replaceChild(headlineLink.firstChild, headlineLink);
+							linkWrapper.classList.add('card-title-link');
+						}
+					}
+
+				});
+			}
 
 			if (flexCardGroup) {
 				flexCardGroup.forEach((group) => {
@@ -33,6 +54,7 @@ const domReady = () => {
 							group.parentNode.insertBefore(linkWrapper, group);
 							linkWrapper.appendChild(group);
 							headline.replaceChild(headlineLink.firstChild, headlineLink);
+							linkWrapper.classList.add('card-title-link');
 						}
 					}
 

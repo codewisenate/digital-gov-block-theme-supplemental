@@ -146,3 +146,73 @@ export function findParentElementByClass(element, className) {
 	}
 	return current;
 }
+
+/**
+ * Creates a breadcrumb container element based on an array of breadcrumb paths. Leverages the AIOSEO format provided by that plugin.
+ * 
+ * @module createBreadcrumbs
+ * @param {Array} paths - An array of objects representing the breadcrumb paths, with each object containing the name and URL of a breadcrumb path.
+ * @returns {HTMLElement} The breadcrumb container element containing all of the breadcrumbs.
+ */
+export function createBreadcrumbs(paths) {
+	const breadcrumbsContainer = document.createElement("div");
+	breadcrumbsContainer.classList.add("aioseo-breadcrumbs");
+
+	const homeBreadcrumb = createBreadcrumb("Home", "/");
+	breadcrumbsContainer.appendChild(homeBreadcrumb);
+
+	const separator = createBreadcrumbSeparator();
+
+	for (let i = 0; i < paths.length; i++) {
+		const path = paths[i];
+		const breadcrumb = createBreadcrumb(path.name, path.url, i === paths.length - 1);
+		breadcrumbsContainer.appendChild(separator.cloneNode(true));
+		breadcrumbsContainer.appendChild(breadcrumb);
+	}
+
+	return breadcrumbsContainer;
+}
+
+/**
+ * Creates a breadcrumb navigation element based on an array of breadcrumb paths. 
+ * 
+ * @param {Array} paths - An array of objects or arrays, where each object or array represents a breadcrumb path. Each object or array should have a 'name' property (the readable name of the breadcrumb) and a 'url' property (the URL of the breadcrumb, if any).
+ * @returns {HTMLElement} - The breadcrumb navigation element, represented as an HTML div element with class 'aioseo-breadcrumbs'.
+ */
+function createBreadcrumb(text, href, isLast) {
+	const breadcrumb = document.createElement("span");
+	breadcrumb.classList.add("aioseo-breadcrumb");
+
+	if (href) {
+		const link = document.createElement("a");
+		link.href = href;
+		link.title = text;
+		link.dataset.text = text;
+		link.textContent = text;
+		breadcrumb.appendChild(link);
+	} else {
+		breadcrumb.textContent = text;
+	}
+
+	if (!isLast) {
+		const separator = createBreadcrumbSeparator();
+		if (breadcrumb.parentNode) {
+			breadcrumb.parentNode.insertBefore(separator, breadcrumb.nextSibling);
+		}
+	}
+
+	return breadcrumb;
+}
+
+/**
+ * Creates a breadcrumb separator element and returns it.
+ * 
+ * @function
+ * @returns {HTMLElement} The breadcrumb separator element.
+*/
+function createBreadcrumbSeparator() {
+	const separator = document.createElement("span");
+	separator.classList.add("aioseo-breadcrumb-separator");
+	separator.textContent = "›";
+	return separator;
+}

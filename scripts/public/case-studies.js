@@ -1,4 +1,4 @@
-import { findParentElementByClass } from '../utils';
+import { findParentElementByClass, createBreadcrumbs, qs } from '../utils';
 
 /**
  * Case Studies DOM manipulation.
@@ -45,7 +45,33 @@ const domReady = () => {
 					}
 				}
 			});
+
 		}
+
+		/**
+		 * Case Study Template.
+		 * 
+		 * Generate the in-page breadcrumbs.
+		 */
+		const isCaseStudy = document.querySelector('body.single-case-study');
+
+		if (isCaseStudy) {
+
+			// Generate the in-page breadcrumbs.
+			const pageTitle = document.title;
+			const paths = [
+				{ name: "Learn", url: "/learning/" },
+				{ name: "Case Studies", url: "/learning/case-studies/" },
+				{ name: pageTitle }
+			];
+			
+			const breadcrumbs = createBreadcrumbs(paths);
+			const breadcrumbsContainer = qs('.breadcrumb-placeholder');
+			if(breadcrumbsContainer) {
+				breadcrumbsContainer.appendChild(breadcrumbs);
+			}
+		}
+
 
 	}, 0);
 };

@@ -1,21 +1,22 @@
-
 body.has-ribbon-menu {
 
 	.current-menu-ancestor {
 		background-color: hsla(0, 0%, 7%, .33);
-	
+
 		&.has-secondary-accent-background-color {
 			background-color: $menuAncestorHighlight !important;
 			color: var(--wp--preset--color--white) !important;
 		}
 	}
-	
+
 
 	.has-modal-open {
 		width: calc(100vw - 4rem);
+
 		.wp-block-navigation__responsive-dialog {
 			margin: 3rem auto auto;
 		}
+
 		.wp-block-navigation__container {
 			gap: 0.5rem !important;
 
@@ -41,20 +42,38 @@ body.has-ribbon-menu {
 			}
 		}
 	}
+
+
 	@media (max-width: 599px) {
 		.is-style-ribbon-menu {
 			height: 0;
-	
+
 			#main-menu {
 				top: -3.75rem;
 				position: relative;
 			}
+
 			nav.wp-block-navigation {
 				width: auto;
 			}
 		}
+
 		.wp-block-navigation__responsive-container-close {
 			top: -3.5rem;
-		  }
+		}
 	}
+
+	&.mobile {
+		.wp-block-navigation__responsive-container {
+			left: -100%;
+			transition: all 0.15s ease-in-out;
+			&.has-modal-open {
+				left: 0;
+			}
+		}
+	}
+}
+
+.breadcrumb-placeholder {
+	min-height: 1.8rem;
 }

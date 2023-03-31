@@ -1,8 +1,8 @@
 {
-  "name": "block-theme-supplemental",
+  "name": "digimod-block-theme-supplemental",
   "author": "Nate King",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",

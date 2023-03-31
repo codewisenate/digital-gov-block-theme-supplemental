@@ -1,3 +1,5 @@
+import { createBreadcrumbs, qs } from '../utils';
+
 /**
  * Community of Practice DOM manipulation.
  * 
@@ -38,6 +40,7 @@ const domReady = () => {
 		/**
 		 * Community of Practice Template.
 		 * 
+		 * Generate the in-page breadcrumbs.
 		 * Set main navigation parent to highlight state.
 		 * Generate meta field links for CoP manager email links.
 		 * Generate meta field links for CoP social links.
@@ -122,6 +125,19 @@ const domReady = () => {
 			if (0 === copSocialLinks.length) {
 				const linkGroup = document.querySelector('.cop-social-links-group');
 				if (linkGroup) linkGroup.remove();
+			}
+
+			// Generate the in-page breadcrumbs.
+			const pageTitle = document.title;
+			const paths = [
+				{ name: "Communities", url: "/communities/" },
+				{ name: pageTitle }
+			];
+		  
+			const breadcrumbs = createBreadcrumbs(paths);
+			const breadcrumbsContainer = qs('.breadcrumb-placeholder');
+			if(breadcrumbsContainer) {
+				breadcrumbsContainer.appendChild(breadcrumbs);
 			}
 		}
 
