@@ -31,7 +31,7 @@ body.has-ribbon-menu {
 					}
 				}
 
-				@media (min-width: 599px) {
+				@media (min-width: 860px) {
 
 					&:focus-visible,
 					&:focus,
@@ -44,14 +44,25 @@ body.has-ribbon-menu {
 	}
 
 
-	@media (max-width: 599px) {
+	@media (max-width: 860px) {
 		.is-style-ribbon-menu {
 			height: 0;
 
 			#main-menu {
+				display: flex;
 				top: -3.75rem;
 				position: relative;
+				justify-content: flex-end;
+				width: calc(100% - 2rem);
 			}
+
+			.has-modal-open .wp-block-navigation__container > .wp-block-navigation-item {
+				flex: 1;
+				margin: 0;
+				min-height: 1rem;
+				min-width: calc(100% - 6rem);
+				width: 100%;
+			  }
 
 			nav.wp-block-navigation {
 				width: auto;
@@ -60,16 +71,6 @@ body.has-ribbon-menu {
 
 		.wp-block-navigation__responsive-container-close {
 			top: -3.5rem;
-		}
-	}
-
-	&.mobile {
-		.wp-block-navigation__responsive-container {
-			left: -100%;
-			transition: all 0.15s ease-in-out;
-			&.has-modal-open {
-				left: 0;
-			}
 		}
 	}
 }

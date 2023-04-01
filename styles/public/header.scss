@@ -1,15 +1,22 @@
-// General header styles.
-.wp-block-template-part {
-	.bcgov-header-group {
-		&.bcgov-site-header,
-		.bcgov-site-header {
-			&.bcgov-header-group {
-				border-bottom: 3px solid var(--wp--preset--color--tertiary);
+body:not(body.wp-admin):not(body.editor-styles-wrapper):not(body.error404) {
+	padding-top: 0 !important;
+}
 
-				.wp-block-columns {
-					.wp-block-site-logo {
-						img {
-							height: 100%;
+// General header styles.
+body.custom-digitalgov {
+	.wp-block-template-part {
+		.bcgov-header-group {
+
+			&.bcgov-site-header,
+			.bcgov-site-header {
+				&.bcgov-header-group {
+					border-bottom: 3px solid var(--wp--preset--color--tertiary);
+
+					.wp-block-columns {
+						.wp-block-site-logo {
+							img {
+								height: 100%;
+							}
 						}
 					}
 				}
