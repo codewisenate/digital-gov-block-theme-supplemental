@@ -1,5 +1,4 @@
 import { addGlobalEventListener, createElement } from '../scripts/utils';
-import { document } from 'jsdom';
 import { expect, describe, beforeEach, it } from 'vitest';
 /**
  * Tests for addGlobalEventListener function found in /src/scripts/public/utils.
