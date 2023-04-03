@@ -74,7 +74,15 @@ body.has-ribbon-menu {
 		}
 	}
 }
+.breadcrumbs-container {
+	.breadcrumb-placeholder {
+		min-height: 2.73rem;
+		height: 100%;
+	}
+}
 
-.breadcrumb-placeholder {
-	min-height: 1.8rem;
+body.home {
+	.breadcrumb-navigation-container {
+		display: none;
+	}
 }

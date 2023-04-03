@@ -41,21 +41,12 @@ const domReady = () => {
 		 * Community of Practice Template.
 		 * 
 		 * Generate the in-page breadcrumbs.
-		 * Set main navigation parent to highlight state.
 		 * Generate meta field links for CoP manager email links.
 		 * Generate meta field links for CoP social links.
 		 */
 		const isCommunityOfPractice = document.querySelector('body.single-cop');
 
 		if (isCommunityOfPractice) {
-
-			// Highlightmain nav item.
-			const liElements = document.querySelectorAll('.wp-block-navigation-item  a[href*="communities"]');
-			if (liElements) {
-				liElements.forEach(liElement => {
-					liElement.classList.add('current-menu-item');
-				});
-			}
 
 			// Links for CoP manager email.
 			const copNames = document.querySelectorAll('.cop-name');

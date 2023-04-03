@@ -65,21 +65,12 @@ const domReady = () => {
 		 * Common Components Template.
 		 * 
 		 * Generate the in-page breadcrumbs.
-		 * Set main navigation parent to highlight state.
 		 * Modify category tag output to remove links and 'active'.
 		 * Generate meta field button for getting started links.
 		 */
 		const isCommonComponent = document.querySelector('body.single-common-component');
 
 		if (isCommonComponent) {
-
-			// Highlightmain nav item.
-			const liElements = document.querySelectorAll('.wp-block-navigation-item  a[href*="bc-common-components"]');
-			if (liElements) {
-				liElements.forEach(liElement => {
-					liElement.classList.add('current-menu-item');
-				});
-			}
 
 			// Modify category tag output.
 			const categoryElement = document.querySelector('.taxonomy-common_component_category');

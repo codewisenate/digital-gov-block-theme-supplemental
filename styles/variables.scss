@@ -18,10 +18,14 @@ $curiousblue: #1e9dd3;
 // Digital Government
 $menuAncestorBackground: #F6F9FC;
 $menuAncestorHighlight: #324166;
+$highlightblue: #c0e6f7;
 
 
 * {
 	// Shadows from https://getcssscan.com/css-box-shadow-examples
 	// #39
 	--box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+	&::selection {
+		background-color: $highlightblue;
+	}
 }

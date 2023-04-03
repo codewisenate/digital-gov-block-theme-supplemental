@@ -19,3 +19,8 @@ nav.footer-nav ul {
 	margin: 0px;
 	padding: 0;
 }
+
+body.has-ribbon-menu footer .wp-block-navigation a:hover {
+	background-color: transparent;
+	text-decoration: underline;
+}

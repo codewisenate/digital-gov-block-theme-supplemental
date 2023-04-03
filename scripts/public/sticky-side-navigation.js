@@ -46,7 +46,7 @@ const domReady = () => {
 							}
 						}
 					}, {
-						rootMargin: "20% 0% -40% 0%" // set rootMargin
+						rootMargin: "15% 0% -75% 0%" // set rootMargin
 					});
 
 					targets.forEach(target => {
@@ -66,15 +66,16 @@ const domReady = () => {
 							if (target) {
 								target.scrollIntoView({
 									behavior: 'smooth',
-									scrollMarginTop: 30
+									scrollMarginTop: 32
 								});
+								
 								// set focus on ID'd element of target section
 								setTimeout(() => {
 									target.setAttribute('tabindex', '0');
 									target.focus();
 									target.removeAttribute('tabindex');
 									target.style.outline = 'none';
-								}, 500);
+								}, 1000);
 							}
 							// Resume observer after scrolling to target
 							setTimeout(() => {
