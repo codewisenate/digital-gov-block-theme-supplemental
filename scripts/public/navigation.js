@@ -16,7 +16,7 @@ const domReady = () => {
 		 * Navigation menu: add ancestor class to sub-menu page menu parents.
 		 * Link checking and classing.
 		 */
-		const currentMenuItem = document.querySelector('.current-menu-item');
+		const currentMenuItem = document.querySelector('header .current-menu-item');
 
 		if (currentMenuItem) {
 			let parentUl = currentMenuItem.closest('ul');

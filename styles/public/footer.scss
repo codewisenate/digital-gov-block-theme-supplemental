@@ -20,7 +20,11 @@ nav.footer-nav ul {
 	padding: 0;
 }
 
-body.has-ribbon-menu footer .wp-block-navigation a:hover {
+body.has-ribbon-menu footer .wp-block-navigation a,
+body.has-ribbon-menu footer .footer-nav a.current-menu-ancestor {
 	background-color: transparent;
-	text-decoration: underline;
+	&:hover {
+		background-color: transparent;
+		text-decoration: underline;
+}
 }

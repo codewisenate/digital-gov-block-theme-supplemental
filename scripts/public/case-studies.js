@@ -61,7 +61,7 @@ const domReady = () => {
 			const pageTitle = document.title;
 			const paths = [
 				{ name: "Learn", url: "/learning/" },
-				{ name: "Case Studies", url: "/learning/case-studies/" },
+				{ name: "Case studies", url: "/learning/case-studies/" },
 				{ name: pageTitle }
 			];
 			

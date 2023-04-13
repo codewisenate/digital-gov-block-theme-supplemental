@@ -36,3 +36,11 @@
 		margin-top: 1.0rem;
 	}
 }
+
+.wp-block-post-template {
+
+	&.is-flex-container {
+
+		gap: 1.2rem;
+	}
+}
